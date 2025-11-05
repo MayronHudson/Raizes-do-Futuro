@@ -1,32 +1,59 @@
+:root{
+/* ===== Cores ===== */
+    --verde-escuro: #011900;
+    --verde-claro: #cfe7cf;
+    --verde-letra: #2e4d2e;
+    --botao: #388e3c;
+    --borda: #a5d6a7;
+    --borda2: #66bb6a;
+    --fundo-secao: #f0f9f0;
+    --frase: #1b5e20; 
+/* ===== Tipografia ===== */
+    --fonte-hf: 'Cabin', sans-serif;
+    --fonte-body: 'Arial', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--verde-claro);
+    font-family: var(--fonte-body);
+}
+
 /* ===== Cabeçalho ===== */
 header {
-    background-color: #012200;
+    background-color: var(--verde-escuro);
     text-align: center;
     padding: 2rem 1rem;
-    font-family: 'Cabin', sans-serif;
+    font-family: var(--fonte-hf);
 }
+
 header h1 {
     font-size: 2.5rem;
     letter-spacing: 0.1rem;
     margin-bottom: 0.5rem;
-    color: #cfe7cf; /* verde claro */
-
+    color: var(--verde-claro);
 }
+
 header h2 {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #cfe7cf;
+    color: var(--verde-claro);
     margin-bottom: 1.5rem;
 }
+
 nav {
-    background-color: #588157; /* verde médio */
+    background-color: #588157;
     padding: 0.8rem 0;
     border-radius: 0.6rem;
     display: inline-block;
 }
 
 nav a {
-    color: #cfe7cf;
+    color: var(--verde-claro);
     text-decoration: none;
     margin: 0 1rem;
     font-weight: bold;
@@ -34,11 +61,12 @@ nav a {
 }
 
 nav a:hover {
-    color: #cfe7cf;
-    background-color: #2e4d2e;
+    color: var(--verde-claro);
+    background-color: var(--verde-letra);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
 }
+
 /* ===== Imagens ===== */
 #imagens {
     display: flex;
@@ -46,8 +74,8 @@ nav a:hover {
     justify-content: center;
     gap: 1.2rem;
     padding: 30px;
-    background-color: #cfe7cf;
-    border-radius: 1.8;
+    background-color: var(--fundo-secao);
+    border-radius: 1.8rem;
 }
 
 #imagens img {
@@ -55,7 +83,7 @@ nav a:hover {
     height: auto;
     border-radius: 15px;
     object-fit: cover;
-    border: 3px solid #a5d6a7;
+    border: 3px solid var(--borda);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 }
@@ -63,104 +91,142 @@ nav a:hover {
 #imagens img:hover {
     transform: scale(1.10);
     box-shadow: 0 10px 20px rgba(0, 100, 0, 0.3);
-    border-color: #66bb6a;
+    border-color: var(--borda2);
 }
-body{
-    margin: 0;
-    padding: 0;
-}
-main{
-    background-color: #cfe7cf;
-    margin: 0;
-    padding: 0;
-}
+
+/* ===== Frase de destaque ===== */
 .frase {
     margin: 0;
     padding: 2rem;
     text-align: center;
     font-style: italic;
-    color: #2e4d2e;
+    color: #1b3a1b;
     font-size: 1.05rem;
 }
-/* ===== Seção Sobre ===== */
-#sobre {
-    max-width: 800px;
-    margin: 50px auto;
+
+/* ===== Estrutura de seções gerais ===== */
+section {
+    max-width: 900px;
+    margin: 4rem auto;
     padding: 2rem;
-    background-color: #f0f9f0;
+    background-color: var(--fundo-secao);
     border-radius: 1rem;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    color: var(--verde-letra);
     line-height: 1.7;
-    font-family: 'Arial', sans-serif;
-    color: #2e4d2e;
 }
 
-#sobre h2 {
-    font-size: 2rem;
+/* ===== Títulos das seções ===== */
+section h2 {
     text-align: center;
+    color: var(--frase);
     margin-bottom: 1.5rem;
-    color: #1b3a1b;
+    font-size: 2rem;
 }
 
-#sobre p {
-    margin-bottom: 1rem;
+/* ===== Texto das seções ===== */
+section p {
     text-align: justify;
-}
-
-#sobre strong {
-    color: #388e3c;
-}
-#MVV {
-    max-width: 800px;
-    margin: 0px auto;
-    padding: 2rem;
-    background-color: #f0f9f0;
-    border-radius: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    line-height: 1.7;
-    font-family: 'Arial', sans-serif;
-    color: #2e4d2e;
-}
-/* ===== Seção Missão, Visão e Valores ===== */
-#MVV h2 {
-    font-size: 1.8rem;
-    color: #2e4d2e;
-    margin-top: 1.5rem;
-    text-align: center;
-}
-
-#MVV p {
     margin-bottom: 1rem;
-    text-align: justify;
 }
 
-#MVV ul {
+section strong {
+    color: var(--botao);
+}
+
+/* ===== Listas ===== */
+section ul {
     margin-top: 1rem;
     padding-left: 1.5rem;
 }
 
-#MVV li {
+section li {
     margin-bottom: 0.8rem;
-    color: #2e4d2e;
 }
 
-#MVV strong {
-    color: #388e3c;
+/* ===== Botões ===== */
+button {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: 0.8rem 2rem;
+    background-color: var(--botao);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
+
+button:hover {
+    background-color: #2e7d32;
+    transform: scale(1.05);
+}
+
+button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== Cadastro ===== */
+#cadastro fieldset {
+    border: 2px solid var(--borda);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #ffffffc9;
+}
+
+#cadastro label {
+    font-weight: bold;
+    color: var(--verde-letra);
+}
+
+#cadastro input[type="text"],
+#cadastro input[type="tel"],
+#cadastro input[type="email"],
+#cadastro input[type="date"] {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.3rem;
+    border: 1px solid var(--borda);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cadastro input:focus {
+    border-color: var(--borda2);
+    box-shadow: 0 0 5px var(--borda2);
+    outline: none;
+}
+
+/* ===== Doações ===== */
+#doacoes blockquote {
+    font-style: italic;
+    color: var(--frase);
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
 /* ===== Rodapé ===== */
 footer {
-    background-color: #012200;
-    color: #cfe7cf;
+    background-color: var(--verde-escuro);
+    color: var(--verde-claro);
     margin: 0;
     padding: 2rem 1rem;
     text-align: center;
-    font-family: 'Cabin', sans-serif;
+    font-family: var(--fonte-hf);
     width: 100%;
     box-sizing: border-box;
 }
 
 footer h3 {
-    color: #cfe7cf;
+    color: var(--verde-claro);
     margin-top: 0;
     margin-bottom: 0.9375rem;
     font-size: 1.5rem;
@@ -171,172 +237,10 @@ footer p {
     margin: 0.5rem 0;
     font-size: 1.05rem;
 }
-/* ===== Cadastro ===== */
-#cadastro {
-    max-width: 800px;
-    margin: 0px auto;
-    padding: 2rem;
-    background-color: #f0f9f0;
-    border-radius: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    color: #2e4d2e;
-}
 
-#cadastro h2, 
-#cadastro h3 {
-    text-align: center;
-    color: #1b5e20;
-}
+/* ===== Responsividade ===== */
 
-#cadastro p {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1rem;
-}
-
-#cadastro fieldset {
-    border: 2px solid #a5d6a7;
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    background-color: #ffffffc9;
-}
-
-#cadastro label {
-    font-weight: bold;
-    color: #2e4d2e;
-}
-
-#cadastro input[type="text"],
-#cadastro input[type="tel"],
-#cadastro input[type="email"],
-#cadastro input[type="date"] {
-    width: 100%;
-    padding: 0.6rem;
-    margin-top: 0.3rem;
-    border: 1px solid #a5d6a7;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#cadastro input:focus {
-    border-color: #66bb6a;
-    box-shadow: 0 0 5px #66bb6a;
-    outline: none;
-}
-
-#cadastro button {
-    display: block;
-    margin: 0 auto;
-    padding: 0.8rem 2rem;
-    background-color: #388e3c;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#cadastro button:hover {
-    background-color: #2e7d32;
-    transform: scale(1.05);
-}
-
-/* ===== Progetos ===== */
-#introducao,
-#projetos,
-#voluntariado,
-#doacoes {
-    max-width: 900px;
-    margin: 4.2rem auto;
-    padding: 2rem;
-    background-color: #f0f9f0;
-    border-radius: 1rem;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    color: #2e4d2e;
-    line-height: 1.7;
-}
-
-#introducao h2,
-#projetos h2,
-#voluntariado h2,
-#doacoes h2 {
-    text-align: center;
-    color: #1b5e20;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
-}
-
-#projetos h3,
-#voluntariado h3 {
-    color: #2e7d32;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-    text-align: left;
-}
-
-#introducao p,
-#projetos p,
-#voluntariado p,
-#doacoes p {
-    text-align: justify;
-    margin-bottom: 1rem;
-}
-
-#voluntariado ul,
-#doacoes ul {
-    margin-top: 1rem;
-    padding-left: 1.5rem;
-}
-
-#voluntariado li,
-#doacoes li {
-    margin-bottom: 0.6rem;
-}
-
-#voluntariado button,
-#doacoes button {
-    display: block;
-    margin: 1.5rem auto 0;
-    padding: 0.8rem 2rem;
-    background-color: #388e3c;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#voluntariado button:hover,
-#doacoes button:hover {
-    background-color: #2e7d32;
-    transform: scale(1.05);
-}
-
-#voluntariado button a,
-#doacoes button a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-#doacoes blockquote {
-    font-style: italic;
-    color: #1b5e20;
-    text-align: center;
-    margin: 2rem auto;
-    font-size: 1.2rem;
-    padding-left: 1rem;
-}
-/* ===== RESPONSIVIDADE ===== */
-
-/* ===== Telas pequenas (celulares) ===== */
+/* Telas pequenas (celulares) */
 @media (max-width: 600px) {
     header h1 {
         font-size: 1.8rem;
@@ -369,13 +273,7 @@ footer p {
         max-width: 300px;
     }
 
-    #sobre, 
-    #MVV,
-    #introducao,
-    #projetos,
-    #voluntariado,
-    #doacoes,
-    #cadastro {
+    section {
         margin: 1.5rem 1rem;
         padding: 1.5rem;
     }
@@ -388,13 +286,12 @@ footer p {
         font-size: 0.9rem;
     }
 
-    #voluntariado button,
-    #doacoes button {
+    button {
         width: 100%;
     }
 }
 
-/* ===== Tablets (entre 601px e 1024px) ===== */
+/* Tablets (entre 601px e 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
     header h1 {
         font-size: 2.2rem;
@@ -404,19 +301,13 @@ footer p {
         width: 180px;
     }
 
-    #sobre,
-    #MVV,
-    #introducao,
-    #projetos,
-    #voluntariado,
-    #doacoes,
-    #cadastro {
+    section {
         max-width: 90%;
         padding: 2rem;
     }
 }
 
-/* ===== Desktops grandes (acima de 1024px) ===== */
+/* Desktops grandes (acima de 1024px) */
 @media (min-width: 1025px) {
     main {
         max-width: 1200px;
