@@ -1,4 +1,4 @@
-# 🌱 Raízes do Futuro
+#  Raízes do Futuro
 
 > **Observação:** Este projeto é uma atividade acadêmica para prática de HTML, CSS e desenvolvimento web responsivo.  
 
@@ -6,18 +6,18 @@
 
 ---
 
-## 🎯 Funcionalidades
+##  Funcionalidades
 
 - Seções informativas: **Sobre**, **Missão, Visão e Valores**, **Projetos**, **Voluntariado**, **Doações**  
 - Formulário de cadastro para voluntários com validação de campos (HTML)  
 - Layout **mobile-first**, responsivo e acessível  
 - Imagens com **lazy loading** para otimização de desempenho  
 - Estrutura semântica para **SEO básico**  
-- Design com cores e elementos inspirados na natureza 🌿
+- Design com cores e elementos inspirados na natureza 
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **HTML5**  
 - **CSS3** (Flexbox, transições, responsividade)  
